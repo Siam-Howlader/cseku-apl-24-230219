@@ -51,7 +51,8 @@ library-management-system/
 ## Application of SOLID Principles
 - Single Responsibility Principle (SRP):
 
-Each class in the project is designed to have a single responsibility. For instance, the Book class focuses on managing book-specific information, like title, author, and availability, while the LoanService class manages the process of borrowing and returning books. This separation of concerns ensures that each class only has one reason to change, making the code easier to understand and maintain.
+  Each class in the project is designed to have a single responsibility. For instance, the Book class focuses on managing book-specific information, like title, author, and availability, while the LoanService 
+  class manages the process of borrowing and returning books. This separation of concerns ensures that each class only has one reason to change, making the code easier to understand and maintain.
 
 - Open/Closed Principle (OCP):
 
@@ -67,10 +68,10 @@ Each class in the project is designed to have a single responsibility. For insta
 
   The project applies ISP by defining focused interfaces that each serve a single purpose:
 
- - NotificationService: Defines methods specifically for sending notifications.
- - LoanService: Contains methods focused on the process of loaning books.
- - CatalogService: Provides methods specific to catalog management.
- - This structure prevents clients from depending on methods they do not use, keeping the code modular and easy to extend.
+  - NotificationService: Defines methods specifically for sending notifications.
+  - LoanService: Contains methods focused on the process of loaning books.
+  - CatalogService: Provides methods specific to catalog management.
+  - This structure prevents clients from depending on methods they do not use, keeping the code modular and easy to extend.
 
 - Dependency Inversion Principle (DIP):
 
