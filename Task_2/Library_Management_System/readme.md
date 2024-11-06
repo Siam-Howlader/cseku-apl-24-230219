@@ -55,15 +55,17 @@ Each class in the project is designed to have a single responsibility. For insta
 
 - Open/Closed Principle (OCP):
 
-The NotificationService interface is designed to be open for extension but closed for modification. For example, new notification types like SMS and Email can be added by implementing NotificationService without altering the existing interface or code, allowing for future flexibility without risking the stability of existing features.
+  The NotificationService interface is designed to be open for extension but closed for modification. For example, new notification types like SMS and Email can be added by implementing NotificationService 
+  without altering the existing interface or code, allowing for future flexibility without risking the stability of existing features.
 
 - Liskov Substitution Principle (LSP):
 
-The NotificationServiceImpl class and other service implementations adhere to LSP by allowing any NotificationService implementation to be used interchangeably. Similarly, the system enables LoanServiceImpl and other service classes to be substituted based on the interface they implement, ensuring the behavior is consistent and correct.
+  The NotificationServiceImpl class and other service implementations adhere to LSP by allowing any NotificationService implementation to be used interchangeably. Similarly, the system enables LoanServiceImpl and 
+  other service classes to be substituted based on the interface they implement, ensuring the behavior is consistent and correct.
 
 - Interface Segregation Principle (ISP):
 
- The project applies ISP by defining focused interfaces that each serve a single purpose:
+  The project applies ISP by defining focused interfaces that each serve a single purpose:
 
  - NotificationService: Defines methods specifically for sending notifications.
  - LoanService: Contains methods focused on the process of loaning books.
@@ -72,7 +74,7 @@ The NotificationServiceImpl class and other service implementations adhere to LS
 
 - Dependency Inversion Principle (DIP):
 
- The project leverages DIP by relying on abstractions rather than concrete classes. For example:
+  The project leverages DIP by relying on abstractions rather than concrete classes. For example:
 
  - LoanServiceImpl implements the LoanService interface, allowing the system to depend on the abstraction rather than the specific implementation.
  - NotificationServiceImpl implements NotificationService, making it easy to replace or extend notification methods without altering dependent classes.
