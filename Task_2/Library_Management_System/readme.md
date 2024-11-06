@@ -47,5 +47,4 @@ BookNotAvailableException.java: This exception is thrown when a book is not avai
 MemberNotFoundException.java: This exception is thrown when an action is attempted with a member ID that does not exist in the system.
 ## UML Diagram
 The project's architecture is illustrated in the UML diagram below, which provides a visual representation of the relationships between the classes and interfaces. This diagram helps in understanding the design and structure of the system.
-# Library Management System
 ![Library Management System Overview](UML_diagram_Library_management_system.png)
