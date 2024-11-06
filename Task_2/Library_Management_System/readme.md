@@ -27,3 +27,29 @@ library-management-system/
 └── exceptions/
     ├── BookNotAvailableException.java
     └── MemberNotFoundException.java
+```
+## Core Components
+Book.java: The Book class represents the properties of a book, including its title, author, ISBN, availability, due date, and the waitlist for borrowing.
+
+Member.java: The Member class holds the details of a library member, including personal information, borrowed books, and membership status.
+
+CatalogService.java: Provides services for adding, removing, and searching books within the library's catalog.
+
+LoanService.java: Responsible for processing book loans, managing borrowed books, and ensuring that no member exceeds the borrowing limit.
+
+NotificationService.java: An interface that defines methods for notifying members via different channels (email, SMS, reminders).
+
+NotificationServiceImpl.java: Implements the NotificationService interface to send notifications for events like overdue books or new arrivals.
+
+WaitList.java: Manages a waitlist for books that are currently unavailable, allowing members to be notified when a book is available.
+
+DatabaseConnection.java: Handles database operations, including connecting, querying, and executing transactions.
+
+## Service Layer
+LoanServiceImpl.java: Implements the loan service logic, ensuring that the book borrowing process adheres to business rules such as checking availability and handling overdue books.
+
+CatalogServiceImpl.java: Implements the catalog service, allowing users to add, remove, and search books in the catalog.
+
+NotificationServiceImpl.java: Implements the logic to notify members about overdue books, new arrivals, and reminders via email or SMS.
+
+Logger.java: A logging utility that records events in the system, helping to track operations and errors.
