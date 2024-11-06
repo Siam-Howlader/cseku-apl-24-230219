@@ -50,15 +50,19 @@ The project's architecture is illustrated in the UML diagram below, which provid
 ![Library Management System Overview](UML_diagram_Library_management_system.png)
 ## Application of SOLID Principles
 Single Responsibility Principle (SRP):
+
 Each class in the project is designed to have a single responsibility. For instance, the Book class focuses on managing book-specific information, like title, author, and availability, while the LoanService class manages the process of borrowing and returning books. This separation of concerns ensures that each class only has one reason to change, making the code easier to understand and maintain.
 
 Open/Closed Principle (OCP):
+
 The NotificationService interface is designed to be open for extension but closed for modification. For example, new notification types like SMS and Email can be added by implementing NotificationService without altering the existing interface or code, allowing for future flexibility without risking the stability of existing features.
 
 Liskov Substitution Principle (LSP):
+
 The NotificationServiceImpl class and other service implementations adhere to LSP by allowing any NotificationService implementation to be used interchangeably. Similarly, the system enables LoanServiceImpl and other service classes to be substituted based on the interface they implement, ensuring the behavior is consistent and correct.
 
 Interface Segregation Principle (ISP):
+
 The project applies ISP by defining focused interfaces that each serve a single purpose:
 
 NotificationService: Defines methods specifically for sending notifications.
@@ -67,6 +71,7 @@ CatalogService: Provides methods specific to catalog management.
 This structure prevents clients from depending on methods they do not use, keeping the code modular and easy to extend.
 
 Dependency Inversion Principle (DIP):
+
 The project leverages DIP by relying on abstractions rather than concrete classes. For example:
 
 LoanServiceImpl implements the LoanService interface, allowing the system to depend on the abstraction rather than the specific implementation.
